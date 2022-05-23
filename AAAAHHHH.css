@@ -1,0 +1,212 @@
+@font-face {
+  font-family: chasing-rabbits;
+  src: url('fonts/chasing-rabbits-font/ChasingRabbits-ByRn.ttf');
+}
+:root {
+  --blue: #0038A8;
+  --purple: #9B4F96;
+  --pink: #D60270;
+}
+body{
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+  display: grid;
+}
+section {
+  color: #1456a9;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  margin: 0;
+}
+.title {
+  text-align: center;
+  margin: 0;
+  padding-top: 5px;
+}
+.title > span {
+  font-family: chasing-rabbits;
+  font-size: 2.2rem;
+  color: #9B4F96;
+}
+
+/* homepage */
+.menu {
+  width: 100px;
+}
+#overlay {
+  display: flex;
+  flex-direction: column;
+}
+#overlay button {
+  
+  height: auto;
+  margin: auto;
+}
+#gameArea button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px; height: 50px;
+}
+#control-container {
+  position: relative;
+  align-items: initial;
+}
+
+.startBtn {
+  width: 140px;
+  padding: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000000;
+  text-decoration: none;
+  border-radius: 50px;
+  outline: 0;
+  border: #D60270 2px solid;
+  transition: ease 100ms all;
+}
+.startBtn:hover {
+  background-color: #D60270;
+  color: #000;
+}
+.leaderboardBtn {
+  margin: auto;
+  width: fit-content;
+  font-family: sans-serif;
+}
+resume {
+  display: hidden;
+}
+
+#game-board {
+  display: grid;
+  width: 80vmin;
+  height: 80vmin;
+  grid-template-columns: repeat(21,1fr);
+  grid-template-rows: repeat(21,1fr);
+  border: 10px solid #9B4F96;
+}
+.snake {
+  background-color: #0038A8;
+  border: .25px solid #0038A8;
+}
+.food {
+  background-color: #D60270;
+  border-radius: 50%;
+}
+.controls {
+  margin: 10px auto auto auto;
+  width: 70vw;
+  height: 70vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: ". up pause-resume"
+                       "left . right"
+                       ". down .";
+}
+#up {grid-area: up; background-image: url('icons/up-arrow.webp'); background-size: contain; background-position: center;}
+#down {grid-area: down; background-image: url('icons/down-arrow.webp'); background-size: contain; background-position: center;}
+#left {grid-area: left; background-image: url('icons/left-arrow.webp'); background-size: contain; background-position: center;}
+#right {grid-area: right;background-image: url('icons/right-arrow.webp'); background-size: contain; background-position: center;}
+#pause {
+  grid-area: pause-resume;
+  background-image: url('icons/pause.svg');
+  width: 55px;
+  height: 55px;
+  margin: 0 0 auto auto;
+}
+#resume {
+  grid-area: pause-resume;
+  background-image: url('icons/play.svg');
+  width: 55px;
+  height: 55px;
+  margin: 0 0 auto auto;
+}
+.controls button {
+  border-radius: 15%;
+}
+
+footer {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  margin: auto 5px 10px 5px;
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+.hidden {
+  display: none !important;
+}
+
+
+dialog {
+  width: 50%;
+}
+#died button {
+  position: relative;
+}
+
+#hellspawn {
+  background-color: purple;
+  border: 11px dashed yellow;
+  font-size: 2em;
+  color: #ff1717;
+  text-align: center;
+  margin-top: 14vw;
+}
+#hellspawn a {
+  color: #9bc39b;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+  #control-container {
+    position: absolute;
+  }
+  dialog {
+    width: 150px;
+  }
+  #hellspawn {
+    position: absolute;
+    top: 0;
+    right:0;
+    margin: 10px 10px auto auto;
+  }
+  .controls {
+    display: none;
+  }
+}
+
+/* Easter Eggs */
+#snakeSpeedSelectMenu {
+  max-width: 392px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid red;
+}
+#snakeSpeedSelectMenu label {
+  display: block;
+  margin: auto auto 10px auto;
+  font-size: 2rem;
+  color: #fff;
+}
+#snakeSpeedSelectMenu input {
+  font-size: 2rem;
+  background: transparent;
+  border-width: 0 0 4px 0;
+  border-color: red;
+  text-align: center;
+  color: #fff;
+}
+#startBtnCustom {
+  font-size: 2rem;
+  padding: 10px;
+  background-color: #6e6efb;
+  color: #fff;
+}

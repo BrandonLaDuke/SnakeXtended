@@ -1,0 +1,26 @@
+{
+  "short_name": "Snake",
+  "name": "Snake Extended",
+  "icons": [
+    {
+      "src": "/snake/snake-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/snake/snake-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "screenshots":[
+    {"src":"/snake/menu.png", "sizes":"1080x2204", "type":"image/png"},
+    {"src":"/snake/controls.png", "sizes":"1080x2191", "type":"image/png"}
+  ],
+  "start_url": "/snake/?source=pwa",
+  "background_color": "#761b1b",
+  "display": "fullscreen",
+  "scope": "/snake/",
+  "theme_color": "#761b1b",
+  "description": "How long can you last? Can you make it to the high score list? Snake Extended is Brandon LaDuke's adaption of the snake game extended from the game AAAHHH by Blou and Brandon LaDuke."
+}
