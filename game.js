@@ -28,7 +28,7 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const analytics = getAnalytics(app);
 
-let SNAKE_SPEED = 7
+let SNAKE_SPEED = 8
 let lastRenderTime = 0
 let death = false
 const gameArea = document.getElementById('gameArea');
@@ -37,6 +37,7 @@ var run = false;
 const startBtn = document.getElementById('start');
 const startBtnEasy = document.getElementById('startEasy');
 const startBtnHard = document.getElementById('startHard');
+const startBtnChallenge = document.getElementById('startChallenge');
 const startBtnInsane = document.getElementById('startInsane');
 const pauseBtn = document.getElementById('pause');
 const resumeBtn = document.getElementById('resume');
@@ -99,6 +100,18 @@ function fuckingDie() {
 snakeSpeedEEgg.addEventListener('click', function (event) {
 
 });
+startBtnEasy.addEventListener('click', function (event) {
+  SNAKE_SPEED = 6;
+  run = true;
+  startBtn.classList.add('hidden');
+  overlay.classList.add('hidden');
+  title.classList.add('hidden');
+  footer.classList.add('hidden');
+  pauseBtn.classList.remove('hidden');
+  gameArea.classList.remove('hidden');
+  controls.classList.remove('hidden');
+  main();
+});
 startBtn.addEventListener('click', function (event) {
   run = true;
   startBtn.classList.add('hidden');
@@ -110,20 +123,8 @@ startBtn.addEventListener('click', function (event) {
   controls.classList.remove('hidden');
   main();
 });
-startBtnEasy.addEventListener('click', function (event) {
-  SNAKE_SPEED = 5;
-  run = true;
-  startBtn.classList.add('hidden');
-  overlay.classList.add('hidden');
-  title.classList.add('hidden');
-  footer.classList.add('hidden');
-  pauseBtn.classList.remove('hidden');
-  gameArea.classList.remove('hidden');
-  controls.classList.remove('hidden');
-  main();
-});
 startBtnHard.addEventListener('click', function (event) {
-  SNAKE_SPEED = 9;
+  SNAKE_SPEED = 10;
   run = true;
   startBtn.classList.add('hidden');
   overlay.classList.add('hidden');
@@ -134,8 +135,20 @@ startBtnHard.addEventListener('click', function (event) {
   controls.classList.remove('hidden');
   main();
 });
-startBtnInsane.addEventListener('click', function (event) {
-  SNAKE_SPEED = 12;
+startBtnChallenge.addEventListener('click', function (event) {
+  SNAKE_SPEED = 14;
+  run = true;
+  startBtn.classList.add('hidden');
+  overlay.classList.add('hidden');
+  title.classList.add('hidden');
+  footer.classList.add('hidden');
+  pauseBtn.classList.remove('hidden');
+  gameArea.classList.remove('hidden');
+  controls.classList.remove('hidden');
+  main();
+});
+startBtnChallenge.addEventListener('click', function (event) {
+  SNAKE_SPEED = 18;
   run = true;
   startBtn.classList.add('hidden');
   overlay.classList.add('hidden');
