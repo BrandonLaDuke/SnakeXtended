@@ -1,9 +1,10 @@
 import {update as updateSnake, draw as drawSnake, getSnakeHead, snakeInterSection} from "./snake.js"
 import {update as updateFood, draw as drawFood} from './water.js'
 import {outsideGrid} from './mathymath.js'
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getDatabase, ref, child, get } from "firebase/database";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js";
+  
+import { getDatabase, ref, child, get } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
 
 // Import the functions you need from the SDKs you need
       
