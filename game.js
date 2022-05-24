@@ -37,6 +37,7 @@ var run = false;
 const startBtn = document.getElementById('start');
 const startBtnEasy = document.getElementById('startEasy');
 const startBtnHard = document.getElementById('startHard');
+const startBtnInsane = document.getElementById('startInsane');
 const pauseBtn = document.getElementById('pause');
 const resumeBtn = document.getElementById('resume');
 const overlay = document.getElementById('overlay');
