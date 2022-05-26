@@ -46,31 +46,36 @@ Diffaculty (Snake Speed and snake expansion rate)
       <button id="startHard" class="startBtn" type="button" name="start">Hard<span class="speed-class hidden"> (8)</span></button>
       <button id="startChallenge" class="startBtn" type="button" name="start">Challenge<span class="speed-class hidden"> (8)</span></button>
       <button id="startInsane" class="startBtn" type="button" name="start">Insane<span class="speed-class hidden"> (8)</span></button>
-      <hr>
-      <a class="startBtn leaderboardBtn" href="leaderboard">View High Scores</a>
+      <button id="leaderboardBtn" type="button" class="startBtn leaderboardBtn">View High Scores</button>
+      <button id="leaderboardBtn" type="button" class="startBtn leaderboardBtn">Install App for Offline Play</button>
     </div>
     <section id="gameArea" class="hidden">
       <div id="game-board"></div>
     </section>
-    <section id="control-container" class="hidden">
-      <dialog id="hellspawn">
+    <dialog id="hellspawn">
+      <div class="hellspawn-contents">
         <!-- if new high score -->
-        <!-- <h2>You got a new high score!</h2> -->
-        <!-- else if placed in top 10 -->
-        <h2>You made it onto the leaderboard!</h2>
-        <form id="nickname" method="dialog">
-          <input type="text" length="3">
-          <input type="number" value="6" hidden>
-          <button></button>
-        </form>
+      <!-- <h2>You got a new high score!</h2> -->
+      <!-- else if placed in top 10 -->
+      <h2>You made it onto the leaderboard!</h2>
+      <p>Enter your Nickname</p>
+      <form id="nickname" method="dialog">
+        <input id="usrNickname" name="usrNickname" type="text" maxlength="3">
+        <input name="score" type="hidden">
+        <br>
+        <button id="confirmNickname" class="startBtn" type="submit">Confirm</button>
+      </form>
 
-        <!-- else retry or quit -->
-        <p>Give up</p>
-        <form id="died" method="dialog">
-          <a href="index.html">Stop</a>
-          <!-- <button id="restart">Try again</button> -->
-        </form>
-      </dialog>
+      <!-- else retry or quit -->
+      <form id="died" method="dialog">
+        <a href="index.html">Back to Menu</a>
+        <!-- <button id="restart">Try again</button> -->
+      </form>
+      </div>
+      
+    </dialog>
+    <section id="control-container" class="hidden">
+      
       
       
       <div class="controls">

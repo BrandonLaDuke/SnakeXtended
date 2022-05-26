@@ -38,13 +38,13 @@ section {
   width: 100px;
 }
 #overlay {
-  display: flex;
+  display: block;
+  position: absolute;
+  top: 75px; right: 0;
   flex-direction: column;
 }
 #overlay button {
-  
-  height: auto;
-  margin: auto;
+  display: block;
 }
 #gameArea button {
   position: absolute;
@@ -58,25 +58,30 @@ section {
 }
 
 .startBtn {
-  width: 140px;
-  padding: 1rem;
-  font-size: 2rem;
+  width: 270px;
+  padding: .6rem;
+  font-size: 1.7rem;
   color: #fff;
   background-color: #000000;
   text-decoration: none;
-  border-radius: 50px;
+  border-radius: 50px 0 0 50px;
   outline: 0;
   border: #D60270 2px solid;
+  text-align: left;
+  padding-left: 2rem;
+  margin-top: -2px;
   transition: ease 100ms all;
+  cursor: pointer;
 }
-.startBtn:hover {
+.startBtn:hover,
+.startBtn:focus {
   background-color: #D60270;
   color: #000;
 }
 .leaderboardBtn {
-  margin: auto;
-  width: fit-content;
   font-family: sans-serif;
+  width: 270px;
+  margin-top: 1.2rem;
 }
 resume {
   display: hidden;
@@ -152,12 +157,9 @@ dialog {
 }
 
 #hellspawn {
-  background-color: purple;
-  border: 11px dashed yellow;
-  font-size: 2em;
-  color: #ff1717;
-  text-align: center;
+  background-color: transparent;
   margin-top: 14vw;
+  border: 0;
 }
 #hellspawn a {
   color: #9bc39b;
@@ -168,14 +170,25 @@ dialog {
   #control-container {
     position: absolute;
   }
-  dialog {
-    width: 150px;
-  }
   #hellspawn {
     position: absolute;
     top: 0;
     right:0;
-    margin: 10px 10px auto auto;
+    left: 0;
+    bottom: 0;
+    margin: 3rem 0 0 0;
+    width: auto;
+  }
+  .hellspawn-contents {
+    margin: auto;
+    background-color: #000;
+    border: var(--blue) 4px solid;
+    border-radius: 50px;
+    font-size: 1em;
+    color: var(--pink);
+    text-align: center;
+    width: 80vh;
+    height: auto;
   }
   .controls {
     display: none;
@@ -209,4 +222,42 @@ dialog {
   padding: 10px;
   background-color: #6e6efb;
   color: #fff;
+}
+
+/* Leaderboard Form */
+@media screen and (min-width: 600px) {
+  .hellspawn-contents h2 {
+    font-size: 2.4rem;
+  }
+}
+#nickname > input {
+  display: block;
+  font-size: 4rem;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 3px transparent solid;
+  outline: none;
+  width: 3ch;
+  margin: auto;
+  color: #fff;
+}
+#nickname > input:focus {
+  border-bottom: 3px var(--purple) solid;
+  animation: nicknameinput infinite 1000ms ease forwards;
+}
+#nickname .startBtn {
+  width: auto;
+  padding: .6rem 1rem;
+  border-radius: 50px;
+}
+@keyframes nicknameinput {
+  0% {
+    border-color: var(--purple);
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: var(--purple);
+  }
 }
